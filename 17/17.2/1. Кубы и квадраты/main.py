@@ -1,9 +1,9 @@
-zoo = ['lion', 'kangaroo', 'elephant', 'monkey']
-for index in range(len(zoo)):
-    if zoo[index] == 'lion':
-        zoo.insert(index + 1, 'bear')
-zoo.remove('elephant')
+num_start = int(input('Левая граница: '))
+num_stop = int(input('Правая граница: '))
+print()
 
-print('Зоопарк:', zoo)
-print('\nЛев сидит в клетке номер', zoo.index('lion') + 1)
-print('\nОбезьяна сидит в клетке номер', zoo.index('monkey') + 1)
+num_cube = [x ** 3 for x in range(num_start, num_stop + 1)]
+num_square = [x ** 2 for x in range(num_start, num_stop + 1)]
+
+print(f'Список кубов чисел в диапазоне от {num_start} до {num_stop}: {num_cube}')
+print(f'Список квадратов диапазоне от {num_start} до {num_stop}: {num_square}')

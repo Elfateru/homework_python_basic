@@ -1,6 +1,6 @@
-matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+import random
 
-for nums in matrix:
-    for num in nums:
-        print(num, end='')
-    print()
+original_prices = [random.randint(-12, 10) for _ in range(5)]
+
+new_prices = [price if price > 0 else 0 for price in original_prices]
+print("Мы потеряли: ",  sum(new_prices) - sum(original_prices))

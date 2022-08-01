@@ -1,13 +1,9 @@
-employees = int(input('Введите кол-во сотрудников: '))
-list_salary = []
-for num in range(employees):
-    salary = int(input(f'\nЗарплата {num + 1} сотрудника: '))
-    list_salary.append(salary)
-
-while 0 in list_salary:
-    list_salary.remove(0)
+string = input('Введите строку: ')
+symbol = input('Введите дополнительный символ: ')
 print()
-print('\nОсталось сотрудников:', len(list_salary))
-print('\nЗарплаты:', list_salary)
-print('\nМаксимальная зп:', max(list_salary))
-print('Минимальная зп:', min(list_salary))
+
+dbl_sym = [sym * 2 for sym in string]
+add_dbl_sym = [sym + symbol for sym in dbl_sym]
+
+print('Список удвоенных символов:', dbl_sym)
+print('Склейка с дополнительным символом:', add_dbl_sym)

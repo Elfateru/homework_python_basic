@@ -1,19 +1,8 @@
-goods = [["яблоки", 50], ["апельсины", 190],
-         ["груши", 100], ["нектарины", 200],
-         ["бананы", 77]]
+import random
 
-print('Текущий ассортимент:', goods)
+n = int(input('Длина списка: '))
+num_list = [random.randint(1, 100) for _ in range(n)]
+a, b = random.randint(1, 5), random.randint(6, 10)
+num_list = num_list[:a] + num_list[b + 1:]
 
-fruit = input('\nНовый фрукт: ')
-price = int(input('Цена: '))
-new_goods = []
-new_goods.append(fruit)
-new_goods.append(price)
-
-goods.append(new_goods)
-print('\nНовый ассортимент:', goods)
-
-for i_index in range(len(goods)):
-    goods[i_index][1] += goods[i_index][1] * 8 / 100
-
-print('\nНовый ассортимент с увел. ценой:', goods)
+print(num_list)

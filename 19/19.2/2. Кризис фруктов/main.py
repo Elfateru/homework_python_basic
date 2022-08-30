@@ -10,17 +10,14 @@ incomes = {
     'persimmon': 310.00,
 }
 
-# min_value = None
-# min_name = ''
-# for name, val in incomes.items():
-#     if min_value is None or min_value > val:
-#         min_value = val
-#         min_name = name
-rez_sorted = sorted(incomes.items(), key=lambda x: x[1])
-print(rez_sorted.pop(0))
+min_value = None
+min_name = ''
+for name, val in incomes.items():
+    if min_value is None or min_value > val:
+        min_value = val
+        min_name = name
 
-# print('Общий доход за год составил', sum(incomes.values()))
-# incomes.pop(min_name)
-# print('Самый маленький доход у {0}. Он составляет {1} рублей'.format(min_name, min_value))
-# print('Итоговый словарь: ', incomes)
-
+print('Общий доход за год составил', sum(incomes.values()))
+incomes.pop(min_name)
+print('Самый маленький доход у {0}. Он составляет {1} рублей'.format(min_name, min_value))
+print('Итоговый словарь: ', incomes)

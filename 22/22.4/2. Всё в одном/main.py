@@ -20,13 +20,16 @@ def get_text_from_file(path_to_file):
     result = ""
     for line in file:
         result += line
+    file.close()
     return result
 
 
-all_py_files = find_file('D:\DEVELOPER\Skillbox\Python_Basic', '.py')  # вместо ".." можно вставить путь до папки python_basic
+all_py_files = find_file(r'D:\DEVELOPER\Skillbox\Python_Basic',
+                         '.py')
 
 file_result = open("scripts.txt", "w", encoding="utf8")
 
 for file_path in all_py_files:
     file_result.write(get_text_from_file(file_path))
     file_result.write("\n" * 2 + "*" * 80 + "\n" * 2)
+file_result.close()

@@ -23,7 +23,7 @@ def get_text_from_file(path_to_file):
     return result
 
 
-all_py_files = find_file('..', '.py')  # вместо ".." можно вставить путь до папки python_basic
+all_py_files = find_file('D:\DEVELOPER\Skillbox\Python_Basic', '.py')  # вместо ".." можно вставить путь до папки python_basic
 
 file_result = open("scripts.txt", "w", encoding="utf8")
 

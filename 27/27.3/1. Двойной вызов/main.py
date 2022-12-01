@@ -7,16 +7,17 @@ def do_twice(func: Callable) -> Callable:
     """
 
     def wrapped_func(*args, **kwargs) -> Any:
-        func()
-        func()
+        func(*args, **kwargs)
+        func(*args, **kwargs)
         return
 
     return wrapped_func
 
 
 @do_twice
-def func_1():
-    print('Hello World')
+def func_1(name):
+    print(f'Hello {name}')
 
 
-func_1()
+new_name = input('Введите имя: ')
+func_1(new_name)

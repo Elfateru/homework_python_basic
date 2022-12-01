@@ -1,6 +1,7 @@
 import time
 from typing import Callable, Any
 
+
 def timer(func: Callable) -> Callable:
     def wrapped_func(*args, **kwargs) -> Any:
         start_at = time.time()
@@ -12,8 +13,8 @@ def timer(func: Callable) -> Callable:
 
     return wrapped_func
 
+
 @timer
 def func_1():
-    return [x ** 2 ** x for x in range(22)]
+    return (x ** 2 ** x for x in range(20))
 
-func_1()
